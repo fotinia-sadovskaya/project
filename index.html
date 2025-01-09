@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <h1>Hello HTML</h1> 
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gadgets</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="partials/header-nav.partial.html"></nav>
+    </header>
+
+    <main class="main">
+      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="partials/hero.partial.html"></section>
+      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="partials/categories.partial.html"></section>
+      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="partials/products.partial.html"></section>
+      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="partials/testimonials.partial.html"></section>
+      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="partials/blog.partial.html"></section>
+    </main>
+
+    <footer class="footer" data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="partials/footer.partial.html"></footer>
+  </body>
 </html>
